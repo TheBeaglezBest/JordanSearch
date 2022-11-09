@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JordanSearch | Originally from 3hk0</title>
+      <meta name="description" content="A Beta Search Engine.">
+      <link rel="shortcut icon" type="image/jpg" href="https://i.imgur.com/tcrWXzy.png">
+    </head>
+    <body>
+        <script>
+        function create() {
+            var url = document.getElementById('input').value;
+
+            var win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+        }
+        </script>
+        <input type="text" value="https://notsearch.uk/search?q=" placeholder="https://notsearch.uk/search?q=" id='input' autofocus>
+        <button onclick='create()'>Search!</button>
+    </body>
+</html>
